@@ -7,9 +7,12 @@
 
 int main()
 {
-	float cels;
+	float cels, fahr;
+	fahr = 300;
+	cels = (fahr * (5/9)) - 32;
 	printf("Fahrenheit\t Celsius\n");
-	for (cels = 0; cels <= UPPER; cels = cels + STEP) {
-		printf("%3.0f \t %6.1f\n", cels, (cels * (9.0/5.0))+32);
+
+	for (fahr = UPPER; fahr >= LOWER; fahr = fahr - STEP) {
+		printf("%3.0f \t %6.1f\n", fahr, cels);
 	}
 }
